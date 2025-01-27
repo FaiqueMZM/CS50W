@@ -3,15 +3,20 @@
     <head>
         <title>Hello</title>
         <script>
-
             function hello() {
-                alert('Hello, world!');
-            }
+                // alert('Hello, world!');
 
+                const header = document.querySelector("h1");
+                if (header.innerHTML === "Hello!") {
+                    header.innerHTML = "Bye!";
+                } else {
+                    header.innerHTML = "Hello!";
+                }
+            }
         </script>
     </head>
     <body>
-        <h1>Hello</h1>
+        <h1>Hello!</h1>
         <button onclick="hello()">Click me</button>
     </body>
 </html>
