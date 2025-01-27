@@ -3,20 +3,18 @@
     <head>
         <title>Hello</title>
         <script>
-            function hello() {
-                // alert('Hello, world!');
-
-                const header = document.querySelector("h1");
-                if (header.innerHTML === "Hello!") {
-                    header.innerHTML = "Bye!";
-                } else {
-                    header.innerHTML = "Hello!";
+            document.addEventListener("DOMContentLoaded",function() {
+                document.querySelector('form').onsubmit = function() {
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello ${name}`);
                 }
-            }
+            });
         </script>
     </head>
     <body>
-        <h1>Hello!</h1>
-        <button onclick="hello()">Click me</button>
+        <form>
+            <input autocomplete="off" autofocus id="name" placeholder="name" type="text" />
+            <input type="submit" name="submit">
+        </form>
     </body>
 </html>
