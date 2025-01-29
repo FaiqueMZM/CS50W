@@ -11,8 +11,13 @@
 
         <script type="text/babel">
             function App() {
+                const x = 1;
+                const y = 2;
                 return (
-                    <div>Hello!</div>
+                    <div>
+                        <h1>Hello, World!</h1>
+                        <p>The sum of {x} and {y} is {x + y}.</p>
+                    </div>
                 );
             }
             ReactDOM.render(<App />, document.querySelector('#app'));
