@@ -4,20 +4,24 @@
         <title>Animate</title>
         <style>
 
-            @keyframes grow {
-                from {
-                    font-size: 20px;
+            @keyframes move {
+                0% {
+                    left: 0%;
                 }
-                to {
-                    font-size: 100px;
+                50% {
+                    left: 46%;
+                }
+                100% {
+                    left: 0%;
                 }
             }
 
             h1 {
                 position: relative;
-                animation-name: grow;
-                animation-duration: 2s;
+                animation-name: move;
+                animation-duration: 5s;
                 animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
             }
         </style>
     </head>
